@@ -1,3 +1,17 @@
+# This file is a Streamlit application for interacting with an SQL agent, specifically designed to analyze F1 data. Here is a summary of its key components:
+
+# - **Imports and Configuration**: The file imports necessary libraries and modules, including `streamlit`, `nest_asyncio`, and custom utilities.
+# - **Page Setup**: Configures the Streamlit page with a title, icon, layout, and custom CSS for dark mode.
+# - **Main Function**: The `main()` function:
+#   - Displays the application header.
+#   - Provides a model selector in the sidebar for different AI models.
+#   - Initializes the SQL agent, either creating a new one or loading an existing session.
+#   - Loads the agent session from the database and retrieves run history from memory.
+#   - Contains a sidebar widget and a chat input for user interaction.
+#   - Displays chat history and processes user queries, generating responses using the SQL agent.
+#   - Includes session management widgets and an about section.
+
+# The application allows users to ask questions about F1 data from 1950 to 2020, with the agent providing intelligent responses by querying an SQL database.
 import nest_asyncio
 import streamlit as st
 from agents import get_sql_agent
